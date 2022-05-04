@@ -29,19 +29,19 @@ function sampev.onServerMessage(color, text)
          money = true
          return false
       end
-      if text:find('Вы передали') or text:find('Вы далеко от игрока') and money then money = false return false end
+      if text:find('Р’С‹ РїРµСЂРµРґР°Р»Рё') or text:find('Р’С‹ РґР°Р»РµРєРѕ РѕС‚ РёРіСЂРѕРєР°') and money then money = false return false end
       if text:find('(.+) Code63car') then
          setVirtualKeyDown(0x0D,true)
          setVirtualKeyDown(0x0D,false)
       end
       if text:find('(.+) Code64car') then
          breakcar = true
-         sampAddChatMessage('* Двигатель заглох (( Guerra_Rush ))', 0xcbabe4)
-         sampAddChatMessage('Ваш двигатель сильно поврежден. Для его починки вызовите механика!', 0xb9b9b9)
-         sampAddChatMessage('Чтобы вызвать механика, используйте телефон', 0xb9b9b9)
+         sampAddChatMessage('* Р”РІРёРіР°С‚РµР»СЊ Р·Р°РіР»РѕС… (( Guerra_Rush ))', 0xcbabe4)
+         sampAddChatMessage('Р’Р°С€ РґРІРёРіР°С‚РµР»СЊ СЃРёР»СЊРЅРѕ РїРѕРІСЂРµР¶РґРµРЅ. Р”Р»СЏ РµРіРѕ РїРѕС‡РёРЅРєРё РІС‹Р·РѕРІРёС‚Рµ РјРµС…Р°РЅРёРєР°!', 0xb9b9b9)
+         sampAddChatMessage('Р§С‚РѕР±С‹ РІС‹Р·РІР°С‚СЊ РјРµС…Р°РЅРёРєР°, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РµР»РµС„РѕРЅ', 0xb9b9b9)
          sampSendChat('/engine')
       end
-      if text:find('(.+) заглушил(а) двигатель') and breakcar then 
+      if text:find('(.+) Р·Р°РіР»СѓС€РёР»(Р°) РґРІРёРіР°С‚РµР»СЊ') and breakcar then 
          return false 
       end
       if text:find('(.+) Code67d') then
